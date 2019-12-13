@@ -3,20 +3,16 @@ id: mdx
 title: Powered by MDX
 ---
 
+<!-- import Youtube from 'react-youtube' -->
+
+<!-- <Youtube videoId="2g811Eo7K8U" /> -->
+
 You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
 
-export const Highlight = ({children, color}) => (
-  <span
-    style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-    {children}
-  </span>
-);
+## Something old
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+<Terminal target="ubuntu.wan.shipyard" shell="/bin/bash" workdir="/" user="root" />
 
-I can write **Markdown** alongside my _JSX_!
+## Something new
+
+<Terminal target="ubuntu.wan.shipyard" shell="/bin/bash" workdir="/etc" user="root" />

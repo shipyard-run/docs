@@ -36,6 +36,8 @@ Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
+<Terminal target="ubuntu.wan.shipyard" shell="/bin/bash" workdir="/" user="root" />
+
 ---
 
 ## Lists
