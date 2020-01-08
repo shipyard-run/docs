@@ -12,8 +12,4 @@ You can write JSX and use React components within your Markdown thanks to [MDX](
 
 ## Something old
 
-<Terminal target="ubuntu.wan.shipyard" shell="/bin/bash" workdir="/" user="root" />
-
-## Something new
-
-<Terminal target="ubuntu.wan.shipyard" shell="/bin/bash" workdir="/etc" user="root" />
+<Terminal target="terminal.shipyard" shell="/bin/bash" workdir="/" user="root" />
