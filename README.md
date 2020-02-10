@@ -1,4 +1,6 @@
-# Website
+# Documentation Component
+
+![Docker](https://github.com/shipyard-run/docs/workflows/Docker/badge.svg)
 
 This website is built using Docusaurus 2, a modern static website generator.
 
