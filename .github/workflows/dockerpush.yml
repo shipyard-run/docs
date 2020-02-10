@@ -1,0 +1,32 @@
+name: Docker
+
+on:
+  push:
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - master
+
+    # Publish `v1.2.3` tags as releases.
+    tags:
+      - v*
+        - 
+jobs:
+  # Push image to GitHub Package Registry.
+  # See also https://docs.docker.com/docker-hub/builds/
+  push:
+
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build image
+        run: docker build -t shipyardrun/docs:${GITHUB_REF#refs/tags/}
+
+      - name: Log into registry
+        run:  docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push image
+        run: |
+          docker push shipyardrun/docs:${GITHUB_REF#refs/tags/}
