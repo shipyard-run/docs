@@ -17,7 +17,7 @@ module.exports = {
     navbar: {
       title: 'Shipyard',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Shipyard',
         src: 'img/logo.svg',
       },
       links: [

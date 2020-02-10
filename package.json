@@ -11,7 +11,7 @@
   "dependencies": {
     "@docusaurus/core": "next",
     "@docusaurus/preset-classic": "next",
-    "@shipyard-run/terminal": "^0.3.5",
+    "@shipyard-run/terminal": "^0.3.8",
     "classnames": "^2.2.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

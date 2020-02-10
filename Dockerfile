@@ -1,6 +1,6 @@
 FROM shipyardrun/terminal-server AS terminal-server
 
-FROM node:lts
+FROM node:buster-slim AS node
 
 COPY --from=terminal-server /usr/bin/terminal-server /usr/bin/terminal-server
 
@@ -11,4 +11,4 @@ COPY ./ /shipyard
 
 RUN yarn install
 
-CMD ["yarn", "start"]
+ENTRYPOINT [ "yarn", "start"]
