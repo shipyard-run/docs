@@ -14,7 +14,7 @@ import DocPaginator from '@theme/DocPaginator';
 import useTOCHighlight from '@theme/hooks/useTOCHighlight';
 
 import { MDXProvider } from '@mdx-js/react';
-import Terminal from '@shipyard-run/terminal'
+import Terminal from '@shipyardrun/terminal'
 
 import styles from './styles.module.css';
 

@@ -1426,10 +1426,10 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
   integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
 
-"@shipyard-run/terminal@^0.3.9":
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/@shipyard-run/terminal/-/terminal-0.3.9.tgz#8d029bb532dd787d42f210084fa68a6a60231c78"
-  integrity sha512-NQdVyNs+uvK2mW5mWPA8sO7jwE7hZPYoSayQa6w8lYZhsbsP16IR221BbAWnyHbJ0lkcFg0QS6Gqi5K/oSyB+A==
+"@shipyardrun/terminal@^0.3.11":
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/@shipyardrun/terminal/-/terminal-0.3.11.tgz#2c4f7cd3347f8c17ecbfa835929c5bedd9d71dea"
+  integrity sha512-AuHTgJ/KEvvLUTLxwMmsINRsT1UlqpuYuhxFY2g1MPLoGPeNbbvGzcOptjvqwcO0mMGA/aDeWPJvZ/xGeWGRDQ==
   dependencies:
     "@testing-library/jest-dom" "^4.2.4"
     "@testing-library/react" "^9.3.3"

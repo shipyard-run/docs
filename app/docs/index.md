@@ -12,4 +12,4 @@ You can write JSX and use React components within your Markdown thanks to [MDX](
 
 ## Something old
 
-<Terminal target="terminal.shipyard" shell="/bin/bash" workdir="/" user="root" />
+<Terminal target="web.ingress.shipyard" shell="/bin/sh" workdir="/" user="root" />
