@@ -2,13 +2,21 @@ FROM shipyardrun/terminal-server AS terminal-server
 
 FROM node:buster-slim AS node
 
-COPY --from=terminal-server /usr/bin/terminal-server /usr/bin/terminal-server
+WORKDIR /shipyard-build
 
-WORKDIR /shipyard
-
-EXPOSE 3000 35729
-COPY ./ /shipyard
+COPY ./ /shipyard-build
 
 RUN yarn install
+RUN yarn cache clean
 
-ENTRYPOINT [ "yarn", "start"]
+FROM node:buster-slim
+
+WORKDIR /shipyard
+#FROM gcr.io/distroless/nodejs
+
+COPY --from=terminal-server /usr/bin/terminal-server /usr/bin/terminal-server
+COPY --from=node /shipyard-build /shipyard
+
+EXPOSE 3000 35729
+
+ENTRYPOINT ["yarn", "start", "--host", "0.0.0.0"]

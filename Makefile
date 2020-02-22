@@ -1,7 +1,7 @@
 .PHONY: build
 
 REPOSITORY=shipyardrun/docs
-VERSION=v0.0.1
+VERSION=v0.0.3
 
 build:
 	docker build -t ${REPOSITORY}:${VERSION} .
