@@ -12,7 +12,7 @@ FROM envoyproxy/envoy:v1.13.0 as envoy
 FROM node:buster-slim
 
 # Set the default env vars
-ENV TERMINAL_SERVER_IP=terminal.docs.shipyard
+ENV TERMINAL_SERVER_IP=terminal.docs.shipyard.run
 ENV TERMINAL_SERVER_PORT=27950
 
 WORKDIR /shipyard
