@@ -18,12 +18,21 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build -t shipyardrun/docs:${GITHUB_REF#refs/tags/} .
+        run: docker build -t gcr.io/shipyard-287511/docs:${GITHUB_REF#refs/tags/} .
 
-      - name: Log into registry
-        run: |
-          echo "${{ secrets.DOCKER_PASS }}" | docker login --username "${{ secrets.DOCKER_USER }}" --password-stdin 
+      # Setup gcloud CLI
+      - 
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: '270.0.0'
+          service_account_key: ${{ secrets.GCP_KEY }}
+
+         # Configure docker to use the gcloud command-line tool as a credential helper
+      - run: |
+          # Set up docker to authenticate
+          # via gcloud command-line tool.
+          gcloud auth configure-docker
 
       - name: Push image
         run: |
-          docker push shipyardrun/docs:${GITHUB_REF#refs/tags/}
+          docker push gcr.io/shipyard-287511/docs:${GITHUB_REF#refs/tags/}
