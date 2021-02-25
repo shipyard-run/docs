@@ -20,7 +20,7 @@ module.exports = {
         alt: 'Shipyard',
         src: 'img/logo.svg',
       },
-      links: [
+      items: [
         {to: 'docs/index', label: 'Docs', position: 'left'},
       ],
     },
