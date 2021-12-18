@@ -17,16 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build image
-        run: docker build -t shipyardrun/docs:${GITHUB_REF#refs/tags/} .
-
       -
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_TOKEN }}
-
-      - name: Push image
-        run: |
-          docker push shipyardrun/docs:${GITHUB_REF#refs/tags/}
+      
+      - name: Build image
+        run: make build
