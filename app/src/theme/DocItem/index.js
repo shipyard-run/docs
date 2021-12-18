@@ -11,7 +11,6 @@ import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import DocPaginator from '@theme/DocPaginator';
-import useTOCHighlight from '@theme/hooks/useTOCHighlight';
 
 import { MDXProvider } from '@mdx-js/react';
 import Terminal from '@shipyardrun/terminal'
@@ -23,7 +22,6 @@ const ACTIVE_LINK_CLASS_NAME = 'contents__link--active';
 const TOP_OFFSET = 0;
 
 function DocTOC({headings}) {
-  useTOCHighlight(LINK_CLASS_NAME, ACTIVE_LINK_CLASS_NAME, TOP_OFFSET);
   return (
     <div className="col col--3">
       <div className={styles.tableOfContents}>

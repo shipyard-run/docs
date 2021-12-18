@@ -7,7 +7,7 @@ COPY ./app /shipyard-build
 RUN yarn install
 RUN yarn cache clean
 
-FROM envoyproxy/envoy:v1.13.0 as envoy
+FROM envoyproxy/envoy:v1.20.1 as envoy
 
 FROM node:buster-slim
 
@@ -24,7 +24,6 @@ COPY --from=node /shipyard-build /shipyard
 
 COPY ./entrypoint.sh /shipyard/entrypoint.sh
 COPY ./envoy.yaml /shipyard/envoy.yaml
-COPY ./envoy_processed.yaml /shipyard/envoy_processed.yaml
 
 EXPOSE 35729 80
 
