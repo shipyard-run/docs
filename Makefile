@@ -1,7 +1,7 @@
 .PHONY: build
 
 REPO=shipyardrun/docs
-VERSION=v0.4.0
+VERSION=v0.4.1
 
 build:
 	docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
