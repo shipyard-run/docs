@@ -21,7 +21,7 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: 'docs/index', label: 'Docs', position: 'left'},
+        {docId: 'docs', to: 'docs/index', type:'doc', label: 'Docs', position: 'left'},
       ],
     },
     footer: {}
@@ -31,6 +31,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
         theme: {
