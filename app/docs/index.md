@@ -14,3 +14,6 @@ You can write JSX and use React components within your Markdown thanks to [MDX](
 ## Something old
 
 <Terminal target="web.ingress.shipyard" shell="/bin/sh" workdir="/" user="root" />
+
+## Button to open file in VSCode
+<VSCodeFile uri="file.txt" name="mine"><button>run me</button></VSCodeFile>

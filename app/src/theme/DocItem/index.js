@@ -14,6 +14,7 @@ import DocPaginator from '@theme/DocPaginator';
 
 import { MDXProvider } from '@mdx-js/react';
 import Terminal from '@shipyardrun/terminal'
+import { VSCodeBrowser, VSCodeFile, VSCodeTerminal } from '@shipyardrun/components'
 
 import styles from './styles.module.css';
 
@@ -76,7 +77,10 @@ function DocItem(props) {
   const metaImageUrl = siteUrl + useBaseUrl(metaImage);
 
   const components = {
-      Terminal
+      Terminal,
+      VSCodeBrowser,
+      VSCodeFile,
+      VSCodeTerminal
   }
 
   return (
