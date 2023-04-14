@@ -25,6 +25,10 @@ static_resources:
                   upgrade_configs: 
                     - upgrade_type: "websocket"
               - match:
+                  prefix: \"/exec\"
+                route:
+                  cluster: terminal
+              - match:
                   prefix: \"/\"
                 route:
                   cluster: docusaurus
