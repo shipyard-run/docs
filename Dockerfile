@@ -4,8 +4,7 @@ WORKDIR /shipyard-build
 
 COPY ./app /shipyard-build
 
-RUN yarn install
-RUN yarn cache clean
+RUN npm install
 
 FROM envoyproxy/envoy:v1.20.1 as envoy
 

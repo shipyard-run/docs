@@ -1,43 +1,68 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
-module.exports = {
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: 'Shipyard',
-  tagline: 'Something something cool',
+  tagline: 'Modern cloud native development environments',
   url: 'https://shipyard.run',
   baseUrl: '/',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'shipyard-run', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
-  themeConfig: {
-    navbar: {
-      title: 'Shipyard',
-      logo: {
-        alt: 'Shipyard',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {docId: 'docs', to: 'docs/index', type:'doc', label: 'Docs', position: 'left'},
-      ],
-    },
-    footer: {}
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
   },
+
   presets: [
     [
-      '@docusaurus/preset-classic',
-      {
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
+      }),
     ],
   ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        logo: {
+          alt: 'Shipyard Logo',
+          src: 'img/shipyard_horizontal_small.png',
+        },
+        items: [
+        ],
+      },
+      footer: {
+        style: 'dark',
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    }),
 };
+
+module.exports = config;

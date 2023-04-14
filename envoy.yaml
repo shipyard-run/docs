@@ -10,7 +10,7 @@ static_resources:
         typed_config:
           \"@type\": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
           codec_type: http1
-          stat_prefix: ingress_http
+          stat_prefix: docusaurus_site
           route_config:
             name: local_route
             virtual_hosts:
@@ -27,13 +27,13 @@ static_resources:
               - match:
                   prefix: \"/\"
                 route:
-                  cluster: docusaurus
+                  cluster: docusaurus_site
                   upgrade_configs: 
                     - upgrade_type: "websocket"
           http_filters:
           - name: envoy.filters.http.router
   clusters:
-  - name: docusaurus
+  - name: docusaurus_site
     connect_timeout: 1.00s
     type: strict_dns
     lb_policy: round_robin

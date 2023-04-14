@@ -7,4 +7,4 @@ eval "echo \"$(cat ./envoy.yaml)\"" >> ./envoy_processed.yaml
 nohup envoy --log-level debug -c ./envoy_processed.yaml --service-cluster front-proxy &
 
 # Run docusaurus in the background
-yarn start
+npm run start
